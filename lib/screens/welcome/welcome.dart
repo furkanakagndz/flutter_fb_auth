@@ -28,7 +28,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  StyledHeading('Welcome.'),
+                  const StyledHeading('Welcome.'),
 
                   // SignUpForm(),
 
