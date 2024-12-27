@@ -4,6 +4,7 @@ import 'package:flutter_auth_tut/models/app_user.dart';
 class AuthService {
   static final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
+  // sign up a new user
   static Future<AppUser?> signUp(String email, String password) async {
     try {
       final UserCredential credential = await _firebaseAuth
@@ -24,5 +25,10 @@ class AuthService {
     } catch (e) {
       return null;
     }
+  }
+
+  // log users out
+  static Future<void> signOut() async {
+    await _firebaseAuth.signOut();
   }
 }
